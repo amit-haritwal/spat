@@ -12,6 +12,7 @@ import { addChatDetails, selectUserDetails } from "./userreducer";
 
 var mqtt = require("mqtt");
 
+
 var client = mqtt.connect("wss://test.mosquitto.org:8080/");
 
 
@@ -74,11 +75,6 @@ function Chat() {
 			setAllUsers(sideusers);
 		}
 	};
-
-	useEffect(() => {
-		if (window.location.protocol === "https:")
-			window.location.protocol = "http";
-	});
 
 	useEffect(() => {
 		client.on("message", (topic, message) => {
