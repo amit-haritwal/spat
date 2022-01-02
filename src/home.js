@@ -84,10 +84,6 @@ function Home() {
 		const fooBarNode = container.current;
 		fooBarNode.classList.remove("sign-up-mode");
 	};
-useEffect(() => {
-		if (window.location.protocol === "https:")
-			window.location.protocol = "http:";
-	});
 	return (
 		<div class="container" ref={container}>
 			<div class="container__forms">
